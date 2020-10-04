@@ -334,15 +334,7 @@ export default _mergeNamespaceAndModule({
             options = {}, firePermissionPromptIsShownEvent, originalOptions) {
         let promiseFulfilled = false;
 
-        if (firePermissionPromptIsShownEvent === true) {
-            window.setTimeout(() => {
-                if (!promiseFulfilled) {
-                    JitsiMediaDevices.emitEvent(
-                        JitsiMediaDevicesEvents.PERMISSION_PROMPT_IS_SHOWN,
-                        browser.getName());
-                }
-            }, USER_MEDIA_PERMISSION_PROMPT_TIMEOUT);
-        }
+        console.log('harta');
 
         if (!window.connectionTimes) {
             window.connectionTimes = {};
